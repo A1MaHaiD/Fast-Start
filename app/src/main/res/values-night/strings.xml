@@ -1,6 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Fast Start</string>
-    <string name="timer_scoreboard">00:00:00</string>
+    <string name="timer_scoreboard">Уведіть ім\'я:</string>
     <string name="add_user">add_user</string>
     <string name="start">start</string>
     <string name="stop">stop</string>
