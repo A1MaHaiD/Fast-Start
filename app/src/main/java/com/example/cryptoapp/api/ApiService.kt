@@ -1,7 +1,7 @@
-package com.example.faststart.api
+package com.example.cryptoapp.api
 
-import com.example.faststart.pojo.CoinInfoListOfData
-import com.example.faststart.pojo.CoinPriceInfoRawData
+import com.example.cryptoapp.pojo.CoinInfoListOfData
+import com.example.cryptoapp.pojo.CoinPriceInfoRawData
 import io.reactivex.rxjava3.core.Single
 import retrofit2.http.GET
 import retrofit2.http.Query

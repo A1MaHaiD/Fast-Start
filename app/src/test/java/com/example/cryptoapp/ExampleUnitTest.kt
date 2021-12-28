@@ -1,4 +1,4 @@
-package com.example.faststart
+package com.example.cryptoapp
 
 import org.junit.Test
 

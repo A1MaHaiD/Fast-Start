@@ -1,12 +1,12 @@
-package com.example.faststart.database
+package com.example.cryptoapp.database
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.example.faststart.pojo.CoinPriceInfo
+import com.example.cryptoapp.pojo.CoinPriceInfo
 
 @Dao
 interface CoinPriceInfoDao {
-    @Query("SELECT * FROM full_price_list ORDER BY lastUpdate")
+    @Query("SELECT * FROM full_price_list ORDER BY lastUpdate DESC")
     fun getPriceList(): LiveData<List<CoinPriceInfo>>
 
     @Query("SELECT * FROM full_price_list WHERE fromSymbol == :fSym")
