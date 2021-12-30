@@ -1,3 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="slash">/</string>
+    <string name="price_label">Ціна:</string>
+    <string name="min_price">Мінімум за день:</string>
+    <string name="max_price">Максимум за день:</string>
+    <string name="last_trade">Остання торгівля:</string>
+    <string name="last_update">Оновленно</string>
 </resources>

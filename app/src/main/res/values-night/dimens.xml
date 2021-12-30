@@ -4,4 +4,6 @@
     <dimen name="spacing_small_8">8dp</dimen>
     <dimen name="font_normal_16">16sp</dimen>
     <dimen name="size_icon_40">40dp</dimen>
+    <dimen name="size_logo_coin_80">80dp</dimen>
+    <dimen name="font_symbol">24sp</dimen>
 </resources>
