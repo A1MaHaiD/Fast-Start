@@ -17,8 +17,7 @@ private lateinit var viewModel: CoinViewModel
 class CoinDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_coin_detail)
-        ActivityCoinDetailBinding.inflate(layoutInflater)
+        binding = ActivityCoinDetailBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
         if (!intent.hasExtra(EXTRA_FROM_SYMBOL)) {
@@ -39,8 +38,6 @@ class CoinDetailActivity : AppCompatActivity() {
                     tvToSymbol.text = it.toSymbol
                     Picasso.get().load(it.getFullImageUrl()).into(ivLogoCoin)
                 }
-
-
             })
         }
         Log.i("DETAIL_INFO", fromSymbol?.length.toString())
