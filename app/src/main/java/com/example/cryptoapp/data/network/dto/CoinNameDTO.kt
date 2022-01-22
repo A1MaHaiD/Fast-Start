@@ -1,11 +1,9 @@
-package com.example.cryptoapp.pojo
+package com.example.cryptoapp.data.network.dto
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-import androidx.room.Entity
-
-data class CoinInfo (
+data class CoinNameDTO (
     @SerializedName("Name")
     @Expose
     val name: String? = null
