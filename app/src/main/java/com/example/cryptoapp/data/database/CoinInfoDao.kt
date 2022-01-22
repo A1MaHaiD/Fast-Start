@@ -1,7 +1,10 @@
 package com.example.cryptoapp.data.database
 
 import androidx.lifecycle.LiveData
-import androidx.room.*
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
 
 @Dao
 interface CoinInfoDao {
@@ -12,5 +15,5 @@ interface CoinInfoDao {
     fun getPriceInfoAboutCoin(fSym: String): LiveData<CoiInfoDBModel>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertPriceList(priceListDB: List<CoiInfoDBModel>)
+    suspend fun insertPriceList(priceListDB: List<CoiInfoDBModel>)
 }
