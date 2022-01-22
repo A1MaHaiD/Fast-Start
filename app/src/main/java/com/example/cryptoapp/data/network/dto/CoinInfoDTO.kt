@@ -1,21 +1,17 @@
-package com.example.cryptoapp.pojo
+package com.example.cryptoapp.data.network.dto
 
-import androidx.room.Entity
-import androidx.room.PrimaryKey
-import com.example.cryptoapp.api.ApiFactory.BASE_IMAGE_URL
-import com.example.cryptoapp.utils.convertTimestampToTime
+import com.example.cryptoapp.data.network.ApiFactory.BASE_IMAGE_URL
+import com.example.cryptoapp.presenter.viewModels.utils.convertTimestampToTime
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-@Entity(tableName = "full_price_list")
-data class CoinPriceInfo(
+data class CoinInfoDTO(
     @SerializedName("TYPE")
     @Expose
     val type: String?,
     @SerializedName("MARKET")
     @Expose
     val market: String?,
-    @PrimaryKey
     @SerializedName("FROMSYMBOL")
     @Expose
     val fromSymbol: String,
@@ -27,10 +23,10 @@ data class CoinPriceInfo(
     val flags: String?,
     @SerializedName("PRICE")
     @Expose
-    val price: Double?,
+    val price: String?,  //from Double
     @SerializedName("LASTUPDATE")
     @Expose
-    val lastUpdate: Int?,
+    val lastUpdate: Long?,  //from Int
     @SerializedName("MEDIAN")
     @Expose
     val median: Double?,
@@ -60,10 +56,10 @@ data class CoinPriceInfo(
     val openDay: Double?,
     @SerializedName("HIGHDAY")
     @Expose
-    val highDay: Double?,
+    val highDay: String?,  //from Double
     @SerializedName("LOWDAY")
     @Expose
-    val lowDay: Double?,
+    val lowDay: String?,  //from Double
     @SerializedName("OPEN24HOUR")
     @Expose
     val open24Hour: Double?,

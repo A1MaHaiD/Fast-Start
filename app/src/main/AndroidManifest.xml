@@ -12,17 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CryptoApp">
         <activity
-            android:name=".ui.CoinDetailActivity"
+            android:name="com.example.cryptoapp.presenter.ui.activities.CoinDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.CoinPriceListActivity"
+            android:name="com.example.cryptoapp.presenter.ui.activities.CoinPriceListActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

@@ -1,4 +1,4 @@
-package com.example.cryptoapp.utils
+package com.example.cryptoapp.presenter.viewModels.utils
 
 import java.sql.Date
 import java.sql.Timestamp
