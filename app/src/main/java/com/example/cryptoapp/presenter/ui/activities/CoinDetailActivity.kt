@@ -7,7 +7,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.cryptoapp.databinding.ActivityCoinDetailBinding
-import com.example.cryptoapp.presenter.viewModels.CoinViewModel
+import com.example.cryptoapp.presenter.view_models.CoinViewModel
 import com.squareup.picasso.Picasso
 
 class CoinDetailActivity : AppCompatActivity() {
@@ -36,7 +36,7 @@ class CoinDetailActivity : AppCompatActivity() {
                 Picasso.get().load(it.imageUrl).into(ivLogoCoin)
             }
         }
-        Log.i("DETAIL_INFO", fromSymbol?.length.toString())
+        Log.i("DETAIL_INFO", fromSymbol.length.toString())
     }
 
     companion object {

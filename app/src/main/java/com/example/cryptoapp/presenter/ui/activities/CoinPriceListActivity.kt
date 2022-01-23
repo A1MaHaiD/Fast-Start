@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.cryptoapp.databinding.ActivityCoinPriceListBinding
 import com.example.cryptoapp.domain.entity.CoinInfoEntity
 import com.example.cryptoapp.presenter.ui.adapters.CoinInfoAdapter
-import com.example.cryptoapp.presenter.viewModels.CoinViewModel
+import com.example.cryptoapp.presenter.view_models.CoinViewModel
 
 
 class CoinPriceListActivity : AppCompatActivity() {
@@ -15,10 +15,8 @@ class CoinPriceListActivity : AppCompatActivity() {
     private val binding by lazy {
         ActivityCoinPriceListBinding.inflate(layoutInflater)
     }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.i("CoinPriceListActivity", "onCreate")
         setContentView(binding.root)
         val adapter = CoinInfoAdapter(this)
         adapter.onCoinClickListener = object : CoinInfoAdapter.OnCoinClickListener {
@@ -29,15 +27,13 @@ class CoinPriceListActivity : AppCompatActivity() {
                 ).apply {
                     startActivity(intent)
                 }
-                Log.i("onCoinClick", "startActivity")
             }
-
         }
         binding.rvCoinPriceList.adapter = adapter
+        binding.rvCoinPriceList.itemAnimator = null
         viewModel = ViewModelProvider(this)[CoinViewModel::class.java]
         viewModel.coinInfoList.observe(this) {
-            adapter.coinInfoList = it
-            Log.i("CoinPriceListActivity", "PriceList show in recycler")
+            adapter.submitList(it)
         }
     }
 }
