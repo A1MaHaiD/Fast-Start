@@ -10,9 +10,8 @@ import com.example.cryptoapp.databinding.ActivityCoinDetailBinding
 import com.example.cryptoapp.presenter.viewModels.CoinViewModel
 import com.squareup.picasso.Picasso
 
-private lateinit var viewModel: CoinViewModel
-
 class CoinDetailActivity : AppCompatActivity() {
+    private lateinit var viewModel: CoinViewModel
     private val binding by lazy {
         ActivityCoinDetailBinding.inflate(layoutInflater)
     }

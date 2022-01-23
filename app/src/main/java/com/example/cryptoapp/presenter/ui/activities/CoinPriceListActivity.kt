@@ -36,7 +36,7 @@ class CoinPriceListActivity : AppCompatActivity() {
         binding.rvCoinPriceList.adapter = adapter
         viewModel = ViewModelProvider(this)[CoinViewModel::class.java]
         viewModel.coinInfoList.observe(this) {
-            adapter.coinInfoEntity = it
+            adapter.coinInfoList = it
             Log.i("CoinPriceListActivity", "PriceList show in recycler")
         }
     }
