@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/super/AndroidStudioProjects/FastStart/app/src/main/res/layout-land/activity_coin_price_list.xml" value="0.21516754850088182" />
         <entry key="..\:/Users/super/AndroidStudioProjects/FastStart/app/src/main/res/layout/activity_coin_detail.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/super/AndroidStudioProjects/FastStart/app/src/main/res/layout/activity_coin_price_list.xml" value="0.12360688956433637" />
         <entry key="..\:/Users/super/AndroidStudioProjects/FastStart/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/super/AndroidStudioProjects/FastStart/app/src/main/res/layout/fragment_coin_detail.xml" value="0.24909420289855072" />
         <entry key="..\:/Users/super/AndroidStudioProjects/FastStart/app/src/main/res/layout/fragment_item_coin_info.xml" value="0.21965579710144928" />
         <entry key="..\:/Users/super/AndroidStudioProjects/FastStart/app/src/main/res/layout/item_coin_info.xml" value="0.24003623188405798" />
       </map>
