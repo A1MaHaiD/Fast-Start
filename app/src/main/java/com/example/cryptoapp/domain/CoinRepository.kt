@@ -5,9 +5,9 @@ import com.example.cryptoapp.domain.entity.CoinInfoEntity
 
 interface CoinRepository {
 
-    fun getCoinInfoList():LiveData<List<CoinInfoEntity>>
+    fun getCoinInfoList(): LiveData<List<CoinInfoEntity>>
 
-    fun getCoinInfo(fromSymbol:String):LiveData<CoinInfoEntity>
+    fun getCoinInfo(fromSymbol: String): LiveData<CoinInfoEntity>
 
-    suspend fun loadData()
+    fun loadData()
 }

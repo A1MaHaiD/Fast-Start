@@ -10,7 +10,6 @@ import com.example.cryptoapp.presenter.ui.adapters.CoinInfoAdapter
 import com.example.cryptoapp.presenter.ui.fragments.CoinDetailFragment
 import com.example.cryptoapp.presenter.view_models.CoinViewModel
 
-
 class CoinPriceListActivity : AppCompatActivity() {
 
     private lateinit var viewModel: CoinViewModel
@@ -40,7 +39,6 @@ class CoinPriceListActivity : AppCompatActivity() {
     }
 
     private fun isOnePaneMode() = binding.fragmentContainer == null
-
 
     private fun launchDetailActivity(fromSymbol: String) {
         val intent = CoinDetailActivity.newIntent(
