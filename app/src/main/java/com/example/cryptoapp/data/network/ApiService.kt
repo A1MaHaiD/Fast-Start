@@ -28,6 +28,5 @@ interface ApiService {
         private const val QUERY_PARAM_TO_SYMBOLS = "tsyms"
 
         private const val CURRENCY = "USD"
-//        private const val CONVERT_COIN = "BTC"
     }
 }
