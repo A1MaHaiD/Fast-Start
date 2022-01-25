@@ -22,11 +22,11 @@ class CoinPriceListActivity : AppCompatActivity() {
         setContentView(binding.root)
         val adapter = CoinInfoAdapter(this)
         adapter.onCoinClickListener = object : CoinInfoAdapter.OnCoinClickListener {
-            override fun onCoinClick(coinInfo: CoinInfoEntity) {
+            override fun onCoinClick(coinInfoEntity: CoinInfoEntity) {
                 if (isOnePaneMode()) {
-                    launchDetailActivity(coinInfo.fromSymbol)
+                    launchDetailActivity(coinInfoEntity.fromSymbol)
                 } else {
-                    launchDetailFragment(coinInfo.fromSymbol)
+                    launchDetailFragment(coinInfoEntity.fromSymbol)
                 }
             }
         }

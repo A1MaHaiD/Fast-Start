@@ -12,8 +12,9 @@ import com.example.cryptoapp.data.workers.RefreshDataWorker
 import com.example.cryptoapp.domain.CoinRepository
 import com.example.cryptoapp.domain.entity.CoinInfoEntity
 import kotlinx.coroutines.delay
+import javax.inject.Inject
 
-class CoinRepositoryImpl(
+class CoinRepositoryImpl @Inject constructor(
     private val application: Application
 ) : CoinRepository {
 

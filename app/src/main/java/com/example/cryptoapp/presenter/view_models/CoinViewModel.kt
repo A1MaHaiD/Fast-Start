@@ -6,11 +6,13 @@ import com.example.cryptoapp.data.repository.CoinRepositoryImpl
 import com.example.cryptoapp.domain.cases.GetCoinInfoListUseCase
 import com.example.cryptoapp.domain.cases.GetCoinInfoUseCase
 import com.example.cryptoapp.domain.cases.LoadDataUseCase
+import javax.inject.Inject
 
-class CoinViewModel(application: Application) : AndroidViewModel(application) {
+class CoinViewModel @Inject constructor(
+    application: Application
+) : AndroidViewModel(application) {
 
     private val repository = CoinRepositoryImpl(application)
-
     private val getCoinInfoListUseCase = GetCoinInfoListUseCase(repository)
     private val getCoinInfoUseCase = GetCoinInfoUseCase(repository)
     private val loadDataUseCase = LoadDataUseCase(repository)
