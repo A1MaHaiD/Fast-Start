@@ -4,7 +4,7 @@ import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 import javax.inject.Inject
 
-data class CoinInfoDTO @Inject constructor(
+data class CoinInfoDTO(
     @SerializedName("TYPE")
     @Expose
     val type: String?,
