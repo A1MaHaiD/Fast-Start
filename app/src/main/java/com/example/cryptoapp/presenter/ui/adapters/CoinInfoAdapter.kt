@@ -10,8 +10,9 @@ import com.example.cryptoapp.domain.entity.CoinInfoEntity
 import com.example.cryptoapp.presenter.ui.adapters.callback.CoinInfoDiffCallback
 import com.example.cryptoapp.presenter.ui.adapters.viewholde.CoinInfoVH
 import com.squareup.picasso.Picasso
+import javax.inject.Inject
 
-class CoinInfoAdapter(
+class CoinInfoAdapter @Inject constructor (
     private val context: Context,
 ) :
     ListAdapter<CoinInfoEntity, CoinInfoVH>(CoinInfoDiffCallback) {
