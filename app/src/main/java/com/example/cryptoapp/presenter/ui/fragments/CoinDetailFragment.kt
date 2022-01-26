@@ -74,7 +74,6 @@ class CoinDetailFragment : Fragment() {
 
     companion object {
         private const val EXTRA_FROM_SYMBOL = "fSym"
-        private const val EMPTY_SYMBOL = ""
 
         fun newInstance(fromSymbol: String): Fragment {
             return CoinDetailFragment().apply {

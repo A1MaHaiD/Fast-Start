@@ -9,6 +9,7 @@ import com.example.cryptoapp.databinding.ActivityCoinDetailBinding
 import com.example.cryptoapp.presenter.ui.fragments.CoinDetailFragment
 
 class CoinDetailActivity : AppCompatActivity() {
+
     private val binding by lazy {
         ActivityCoinDetailBinding.inflate(layoutInflater)
     }
