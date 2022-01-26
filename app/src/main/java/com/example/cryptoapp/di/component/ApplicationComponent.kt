@@ -5,6 +5,7 @@ import com.example.cryptoapp.di.annotation.ApplicationScope
 import com.example.cryptoapp.di.module.AdapterModule
 import com.example.cryptoapp.di.module.CoinViewModelModule
 import com.example.cryptoapp.di.module.DataModule
+import com.example.cryptoapp.di.module.WorkerModule
 import com.example.cryptoapp.presenter.CoinApp
 import com.example.cryptoapp.presenter.ui.activities.CoinPriceListActivity
 import com.example.cryptoapp.presenter.ui.fragments.CoinDetailFragment
@@ -16,7 +17,8 @@ import dagger.Component
     modules = [
         CoinViewModelModule::class,
         DataModule::class,
-        AdapterModule::class
+        AdapterModule::class,
+        WorkerModule::class
     ]
 )
 interface ApplicationComponent {
