@@ -1,14 +1,37 @@
 package com.example.cryptoapp.di.module
 
-/*
+import android.app.Application
+import com.example.cryptoapp.data.database.AppDatabase
+import com.example.cryptoapp.data.database.CoinInfoDao
+import com.example.cryptoapp.data.network.ApiFactory
+import com.example.cryptoapp.data.network.ApiService
+import com.example.cryptoapp.data.repository.CoinRepositoryImpl
+import com.example.cryptoapp.di.annotation.ApplicationScope
+import com.example.cryptoapp.domain.CoinRepository
+import dagger.Binds
+import dagger.Module
+import dagger.Provides
+
 @Module
 interface DataModule {
 
-    @ApplicationScope
     @Binds
-    fun bindRoomData(imp: AppDatabase): CoinInfoDao
+    @ApplicationScope
+    fun bindRepository(impl: CoinRepositoryImpl): CoinRepository
 
-    @ApplicationScope
-    @Binds
-    fun bindRetrofitData(imp: ApiFactory): ApiService
-}*/
+    companion object {
+        @Provides
+        @ApplicationScope
+        fun provideCoinInfoDao(
+            application: Application
+        ): CoinInfoDao {
+            return AppDatabase.getInstance(application).coinPriceInfoDao()
+        }
+
+        @Provides
+        @ApplicationScope
+        fun provideApiService(): ApiService {
+            return ApiFactory.apiService
+        }
+    }
+}
